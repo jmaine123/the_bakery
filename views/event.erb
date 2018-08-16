@@ -1,0 +1,13 @@
+<h1 class="title_header">Baking Events</h1>
+
+<div class="info-grid">
+    <% @events.first(12).each do |event|%>
+    <div>
+    <center>
+      <a href="<%=event['url']%>"><img id="event_pic"src="<%= event['logo']['original']['url']%>" height="300" width="100"></a>
+      <h3 id="event_title"><%=event['name']['text']%></h3>
+      <p><%=event['description']['text'][0..300]+ '...'%></p>
+    </center>
+    </div>
+    <%end%>
+</div>
